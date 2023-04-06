@@ -28,7 +28,7 @@
 			<input type="password" id="password" name="password" placeholder="Enter a password" required>
 			
 			<label for="retype-password">Retype password</label>
-			<input type="password" id="retype-password" name="retype-password" placeholder="Retype your password" required>
+			<input type="password" id="retype-your password" name="retype-password" placeholder="Retype your password" required>
 			
 			<input type="submit" value="Submit">
 		</form>
