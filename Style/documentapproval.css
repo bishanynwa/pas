@@ -1,60 +1,99 @@
+
 body {
 	font-family: Arial, sans-serif;
-	background-color: #f1f1f1;
+	background-color: #f5f5f5;
 }
-
-.container {
-	max-width: 800px;
-	margin: 0 auto;
+h1 {
+	margin: 20px 0;
+	text-align: center;
+}
+.approvalForm {
+	width: 80%;
+	margin: auto;
 	padding: 20px;
 	background-color: #fff;
-	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 10px #888888;
+	margin-left: 220px;
 }
-
-h1 {
-	text-align: center;
-	color: #333;
-	margin-bottom: 20px;
-}
-
-form {
-	margin-top: 20px;
-}
-
 label {
 	display: block;
-	margin-bottom: 5px;
-	font-weight: bold;
-	color: #333;
+	margin-bottom: 10px;
 }
-
-input[type="file"],
-input[type="text"],
-textarea {
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+input[type="text"], input[type="file"] {
+	display: block;
 	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #f5f5f5;
 }
-
-input[type="submit"] {
-	background-color: #4CAF50;
-	color: #fff;
+input[type="number"] {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #f5f5f5;
+}
+button {
+	display: inline-block;
 	padding: 10px 20px;
 	border: none;
 	border-radius: 4px;
+	color: #fff;
+	background-color: #4CAF50;
 	cursor: pointer;
-	margin-top: 20px;
 }
-
-input[type="submit"]:hover {
+button:hover {
 	background-color: #3e8e41;
 }
-
-#reason {
-	display: none;
+.reject {
+	background-color: #f44336;
+}
+.reject:hover {
+	background-color: #ba0c0c;
 }
 
-#status:checked + #reason {
-	display: block;
+.popup {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 9999;
+}
+
+.popup-inner {
+	width:40vw;	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+}
+.approvePopup{
+	display:flex;
+	flex-direction:column;
+}
+.approveSubmit{
+display: inline-block;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	background-color: #4CAF50;
+	cursor: pointer;
+}
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
 }

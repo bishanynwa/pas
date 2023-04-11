@@ -8,7 +8,7 @@
 <body>
 	<div class="container">
 		<h1>Admin Login</h1>
-		<form>
+		<form action="../Back/adminlogin.php" method="post">
 			<label for="email">Email address</label>
 			<input type="email" id="email" name="email" placeholder="Enter your email address" required>
 			
