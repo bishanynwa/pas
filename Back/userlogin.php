@@ -3,28 +3,29 @@
 // Include the database connection file
 include 'conn.php';
 
+var_dump($_POST['email']);
+
 // Check if the form was submitted
-if (isset($_POST['login'])) {
+if (isset($_POST['email']) && isset( $_POST['password']) && !empty($_POST['email']) && !empty( $_POST['password'])) {
 
     // Get the email and password inputs from the form
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Query the employee table for a matching email and password
-    $employee_query = "SELECT * FROM employee WHERE email = '$email' AND password = '$password'";
-    $employee_result = mysqli_query($conn, $employee_query);
+    // print_r($_POST);
 
-    // Query the employer table for a matching email and password
-    $employer_query = "SELECT * FROM employer WHERE email = '$email' AND password = '$password'";
-    $employer_result = mysqli_query($conn, $employer_query);
+    // Query the employee table for a matching email and password
+    $employee_query = "SELECT * FROM users WHERE email_id = '$email' AND password = '$password'";
+    $employee_result = mysqli_query($conn, $employee_query);
 
     // Check if the employee login was successful
     if (mysqli_num_rows($employee_result) > 0) {
         // Employee login was successful
-        $employee_data = mysqli_fetch_assoc($employee_result);
+        // $employee_data = mysqli_fetch_assoc($employee_result);
 
         // Redirect to the employee dashboard page
-        header('Location: Performance%20Appraisal%20System/Front/employersetup.php');
+        // header('Location: Front\dashboard.php');
+        echo"success";
         exit();
     }
 
@@ -34,7 +35,8 @@ if (isset($_POST['login'])) {
         $employer_data = mysqli_fetch_assoc($employer_result);
 
         // Redirect to the employer dashboard page
-        header('Location: Performance%20Appraisal%20System/Front/employersetup.php');
+        // header('Location: Front\dashboard.php');
+        echo"success";
         exit();
     }
 

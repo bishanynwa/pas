@@ -13,7 +13,7 @@
     <main>
       <h1>Work Upload Page</h1>
 	  <br><br>
-      <form action="upload.php" method="post" enctype="multipart/form-data">
+      <form action="../Back/documentupload.php" method="post" enctype="multipart/form-data">
         <label for="fileUpload">Upload Document:</label>
         <input type="file" id="fileUpload" name="fileUpload">
         <br><br>
