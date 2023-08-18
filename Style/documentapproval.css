@@ -15,10 +15,7 @@ h1 {
 	box-shadow: 0px 0px 10px #888888;
 	margin-left: 220px;
 }
-label {
-	display: block;
-	margin-bottom: 10px;
-}
+
 input[type="text"], input[type="file"] {
 	display: block;
 	width: 100%;
@@ -28,14 +25,13 @@ input[type="text"], input[type="file"] {
 	border-radius: 4px;
 	background-color: #f5f5f5;
 }
-input[type="number"] {
+.rating {
 	display: block;
-	width: 100%;
+	width: 10%;
 	padding: 10px;
-	margin-bottom: 20px;
 	border: none;
 	border-radius: 4px;
-	background-color: #f5f5f5;
+	background-color: #e6e6e6;
 }
 button {
 	display: inline-block;
@@ -97,3 +93,24 @@ display: inline-block;
 	right: 10px;
 	cursor: pointer;
 }
+.document{
+	display: flex;
+	gap:20px;
+	align-items: center;
+}
+.documentList{
+	display: flex;
+	flex-direction: column;
+	gap:20px;
+}
+
+  .rating-submit{
+	padding: 5px 10px;
+  }
+  .downloadFile{
+	padding: 5px 10px;
+	background-color: #00ff08;
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+	text-decoration: none;
+  }

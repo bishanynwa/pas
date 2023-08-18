@@ -8,11 +8,11 @@
         $username = stripcslashes($username);  
         $password = stripcslashes($password);  
     
-         $sql = "SELECT DISTINCT  email_id, password, 'employer' AS role
+         $sql = "SELECT DISTINCT id  ,email_id, password, 'employer' AS role
             FROM employer
             WHERE email_id = '$username' and password = '$password'
             UNION ALL
-            SELECT DISTINCT  email_id, password, 'employees' AS role
+            SELECT DISTINCT  id ,email_id, password, 'employees' AS role
             FROM employees  
             WHERE email_id = '$username' and password = '$password';";
 
@@ -21,9 +21,14 @@
         $count = mysqli_num_rows($result);
         if($count == 1){  
             // $data=mysqli_fetch_assoc($result);
-            // print_r($row);
-            // die();
+            
+            $_SESSION[$row['role']]=$row["id"];
+            // echo $row["employeeid"];
+            
+			$_SESSION['user_id']=$row['id'];
+
             $_SESSION['user']=$row["email_id"];
+            
             $_SESSION['role']=$row["role"];
             header("Location: /Performance%20Appraisal%20System/Front/dashboard.php");
         }else if($count > 1){

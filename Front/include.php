@@ -40,7 +40,7 @@
 						echo "
 							<li><a href='documentupload.php'>Work Upload</a></li>
 							
-							<li><a href='#'>Employee Ratings</a></li>
+							<li><a href='employeeratings.php'>Employee Ratings</a></li>
 					
 							
 							";
@@ -48,7 +48,7 @@
 					elseif ($role === $roles["EMPLOYER"]) {
 						echo "
 								<li><a href='documentapproval.php'>Work Approval</a></li>
-								<li><a href='#'>Employee Ratings</a></li>
+								<li><a href='employeeratings.php'>Employee Ratings</a></li>
 								<li><a href='employeesetup.php'>Employee Setup</a></li>
 								<li><a href='employersetup.php'>Employer Setup</a></li>
 							";
@@ -56,7 +56,7 @@
 					elseif ($role === 3) {
 						echo "
 							<li><a href='documentupload.php'>Work Upload</a></li>
-							<li><a href='#'>Employee Ratings</a></li>
+							<li><a href='employeeratings.php'>Employee Ratings</a></li>
 							";
 					}
 
