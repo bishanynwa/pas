@@ -33,7 +33,7 @@ if (isset($_FILES['fileUpload']) && $_FILES['fileUpload']['error'] === UPLOAD_ER
     $stmt->close();
 
     // Redirect to success page
-    header('Location: success.php');
+    header('Location: ../Front/dashboard.php');
     exit();
 } else {
     // Redirect to error page

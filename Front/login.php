@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="..\Style\login.css">
 
 </head>
+<?php 
+  session_start();
+  if(isset($_SESSION['user'])) {
+    header("Location: dashboard.php?fail=true");
+    exit;
+  }
+?>
 <body>
 	<div class="container">
 		<h1>User Login</h1>

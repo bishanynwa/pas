@@ -6,8 +6,15 @@
     <link rel="stylesheet" href="../Style/dashboard.css">
   </head>
   <body>
-    <?php include 'include.php'; ?>
+    <?php
+      include 'include.php';
+     ?>
+    <?php
+      // print_r($_SESSION);
+      // echo $_SESSION["user"];
+      // echo $_SESSION["role"];
 
+    ?>
     <main>
     <div class="aboutus">
       <h1>About Us</h1>

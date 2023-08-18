@@ -1,5 +1,5 @@
 <?php
-
+$roles=["EMPLOYEES"=>'employees',"EMPLOYER"=>'employer'];
 $server='localhost';
 $username='root';
 $password="";

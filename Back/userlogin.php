@@ -3,7 +3,7 @@
 // Include the database connection file
 include 'conn.php';
 
-var_dump($_POST['email']);
+var_dump($_POST['password']);
 
 // Check if the form was submitted
 if (isset($_POST['email']) && isset( $_POST['password']) && !empty($_POST['email']) && !empty( $_POST['password'])) {
@@ -30,9 +30,9 @@ if (isset($_POST['email']) && isset( $_POST['password']) && !empty($_POST['email
     }
 
     // Check if the employer login was successful
-    if (mysqli_num_rows($employer_result) > 0) {
+    if (mysqli_num_rows($employee_result) > 0) {
         // Employer login was successful
-        $employer_data = mysqli_fetch_assoc($employer_result);
+        $employee_result = mysqli_fetch_assoc($employee_result);
 
         // Redirect to the employer dashboard page
         // header('Location: Front\dashboard.php');
