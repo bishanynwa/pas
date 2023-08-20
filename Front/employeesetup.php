@@ -39,8 +39,7 @@
                     <th>Superior</th>
                     <th>Phone Number</th>
                     <th>Email ID</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+            
                 </tr>
             </thead>
             <tbody>
@@ -59,8 +58,7 @@
                         echo "<td>".$row['employer_id']."</td>";
                         echo "<td>".$row['phone_number']."</td>";
                         echo "<td>".$row['email_id']."</td>";
-                        echo "<td><a class='update' href='#".$row['id']."  '>update </a> </td>";
-                        echo "<td><a class='delete' href='#".$row['id']."  '>delete </a> </td>";
+                     
                         echo "</tr>";
                         $ID++;
                     }

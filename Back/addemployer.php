@@ -1,5 +1,6 @@
 
 <?php
+include "conn.php";
 
 
 $firstname=$_POST['firstname'];
@@ -9,7 +10,6 @@ $phonenumber=$_POST['phone'];
 $email=$_POST['email'];
 $password=$_POST['password'];
 
-include "conn.php";
 
 $sql="INSERT INTO `employer` (`first_name`, `middle_name`, `last_name`, `phone_number`, `email_id`, `password`) 
 VALUES ( '$firstname', '$middlename', '$lastname', '$phonenumber', '$email', '$password');";

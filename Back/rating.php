@@ -44,6 +44,7 @@ while ($row = $result->fetch_assoc()) {
     $addColumnResult = $conn->query($addColumnQuery);
     }
 
+    echo $u_id;
     // Fetch the documents for a specific employee
     $selectSql = "SELECT * FROM documents WHERE employee_id = ?";
     $selectStmt = $conn->prepare($selectSql);
@@ -54,18 +55,19 @@ while ($row = $result->fetch_assoc()) {
     $totalrating = 0;
     $totalweight = 0;
     $number = 0;
+    echo $number;
 
     // Loop through the results
     while ($row = $result->fetch_assoc()) {
         // print_r([ $row['ratings'],$row['weight']]);
-    // Process and display the document information
+        // Process and display the document information
     $totalrating += $row['ratings'];
     $totalweight += $row['weight'];
-    $number++;
+    $number+=1;
     }
-// print_r([$totalrating , $totalweight ,$number]);
+print_r([$totalrating , $totalweight ,$number]);
     $avgRating = ($totalrating + $totalweight) / $number;
-
+    
     // Close the SELECT statement
     $selectStmt->close();
 

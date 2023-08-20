@@ -21,6 +21,7 @@
 	$result = mysqli_query($conn, $sql);  
     // $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
 	while ($row = mysqli_fetch_assoc($result)) {
+		print_r($row['employee_id']);
 		?>
 		<form class="approvalForm">
 			<div class="document">
@@ -29,7 +30,7 @@
 				<p>Status:<?php echo $row['file_status']?></p>
 				<p>Employee id: <?php echo $row['employee_id']?></p>
 				<p>Employer:<?php echo $row['employer_id']?></p>
-				<button type="button" onclick="openPopup(<?php echo $row['id'] ?>,<?php echo $row['employer_id'] ?>)">Approve</button>
+				<button type="button" onclick="openPopup(<?php echo $row['id'] ?>,<?php echo $row['employee_id'] ?>)">Approve</button>
 				<button type="button" onclick="openrejectPopup(<?php echo $row['id'] ?>)"class="reject">Reject</button>
 				<a class='downloadFile' href=<?php echo "documentview.php?id=".$row['id']?>>View Documents</a>
 				<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
